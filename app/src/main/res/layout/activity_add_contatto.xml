@@ -1,54 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
+        android:layout_marginTop="10dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_below="@+id/detailTextView"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/contattoImageView" />
-
-
+        android:id="@+id/contactImage"
+        android:layout_centerHorizontal="true"/>
     <LinearLayout
+        android:id="@+id/inserimenti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/contattoImageView">
+        android:layout_below="@id/contactImage">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="5dp"
-            android:hint="@string/name"
-            android:id="@+id/edit_name" />
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:text="@string/nomeCognome"/>
 
-        <EditText
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="-160dp"
+                android:gravity="center" /></LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="5dp"
-            android:hint="@string/number"
-            android:id="@+id/edit_number" />
-
-        <Button
-            android:text="@string/save"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/detailTextView"
-            android:layout_toRightOf="@+id/detailImageView"
-            android:id="@+id/saveButton" />
-
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="@string/telefono"/>
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:id="@+id/telefono"/></LinearLayout>
 
 
     </LinearLayout>
+    <Button
+        android:text="@string/confirm"
+        android:textAlignment="center"
+        android:gravity="center_vertical|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inserimenti"
+        android:id="@+id/addButton"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

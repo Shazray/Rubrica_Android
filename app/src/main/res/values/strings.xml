@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AccademiaApp</string>
+    <string name="app_name">Lista Contatti</string>
 
     <string name="add">Add</string>
     <string name="alert_ok">OK</string>
@@ -8,10 +8,13 @@
     <string name="alert_remove_title">Remove</string>
     <string name="alert_remove_message">Remove the selected item?</string>
 
-    <string name="back">Back</string>
+    <string name="back">Add favourite</string>
     <string name="save">Save</string>
     <string name="name">Nome: </string>
     <string name="number">Numero: </string>
+    <string name="nomeCognome">Nome Cognome</string>
+    <string name="telefono">Telefono</string>
+    <string name="confirm">Save</string>
 
     <string-array name="base_list_datasource">
         <item>Apple</item>

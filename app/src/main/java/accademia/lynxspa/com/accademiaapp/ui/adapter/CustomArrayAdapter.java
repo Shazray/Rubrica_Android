@@ -35,6 +35,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Contatto> {
 
     }
 
+
     public View getViewOptimize(int position, View convertView, ViewGroup parent) {
 
         ViewHolder viewHolder = null;
@@ -45,6 +46,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Contatto> {
             viewHolder.name = (TextView) convertView.findViewById(R.id.name);
             viewHolder.number = (TextView) convertView.findViewById(R.id.number);
             viewHolder.image = (ImageView) convertView.findViewById(R.id.logo);
+            viewHolder.star = (ImageView) convertView.findViewById(R.id.star);
             convertView.setTag(viewHolder);
 
         } else {
@@ -57,7 +59,20 @@ public class CustomArrayAdapter extends ArrayAdapter<Contatto> {
 
         // Set icon
         viewHolder.image.setBackgroundColor(DataAccessUtils.getColorForPosition(context, position));
+
+        // Set currently favorite contact
+
+        String favoriteValue = DataAccessUtils.getFavoriteValueInPreferences(getContext());
+
+        if (favoriteValue != null && favoriteValue.equals(contatto.getTelefono())) {
+            viewHolder.star.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.star.setVisibility(View.GONE);
+        }
+
+
         return convertView;
+
 
     }
 
@@ -66,7 +81,9 @@ public class CustomArrayAdapter extends ArrayAdapter<Contatto> {
         public TextView name;
         public TextView number;
         public ImageView image;
+        public ImageView star;
     }
+
     public void setValues(List<Contatto> contatti) {
 
         Log.d("DATA SET", "Contacts list count changed in " + contatti.size());
@@ -80,4 +97,5 @@ public class CustomArrayAdapter extends ArrayAdapter<Contatto> {
     public int getCount() {
         return contattoList.size();
     }
+
 }

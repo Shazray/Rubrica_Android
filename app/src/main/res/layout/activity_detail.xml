@@ -4,28 +4,50 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/detailTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:id="@+id/detailTextView" />
+        android:gravity="center" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/numberDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detailTextView"
+        android:gravity="center" />
 
     <ImageView
+        android:id="@+id/detailImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_below="@+id/detailTextView"
-        android:id="@+id/detailImageView" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/numberDetail"
+        android:layout_marginTop="31dp" />
 
     <Button
-        android:text="@string/back"
-        android:gravity="center"
+        android:id="@+id/detailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/detailTextView"
-        android:layout_toRightOf="@+id/detailImageView"
-        android:id="@+id/detailButton" />
+        android:layout_alignStart="@+id/favoriteButton"
+        android:layout_alignTop="@+id/detailImageView"
+        android:gravity="center"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/favoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailButton"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/detailImageView"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="@string/back" />
 
 
 </RelativeLayout>

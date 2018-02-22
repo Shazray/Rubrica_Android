@@ -2,6 +2,7 @@ package accademia.lynxspa.com.accademiaapp.ui.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /* AlertDialog with remove item function */
+
     private void showRemoveAlertDialog(final int selectedItemIndex) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getString(R.string.alert_remove_title));

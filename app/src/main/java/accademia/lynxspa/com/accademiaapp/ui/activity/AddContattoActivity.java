@@ -19,10 +19,6 @@ import accademia.lynxspa.com.accademiaapp.data.Contatto;
 import accademia.lynxspa.com.accademiaapp.data.MainSingleton;
 import accademia.lynxspa.com.accademiaapp.logic.DataAccessUtils;
 
-/**
- * Created by Simone Cimoli on 19/02/18.
- */
-
 public class AddContattoActivity extends AppCompatActivity {
 
     EditText nomeEditText;
@@ -33,13 +29,13 @@ public class AddContattoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contatto);
 
-        nomeEditText = (EditText) findViewById(R.id.edit_name);
-        numeroEditText = (EditText) findViewById(R.id.edit_number);
+        nomeEditText = (EditText) findViewById(R.id.nome);
+        numeroEditText = (EditText) findViewById(R.id.telefono);
 
-        ImageView photo = (ImageView) findViewById(R.id.contattoImageView);
+        ImageView photo = (ImageView) findViewById(R.id.contactImage);
         photo.setBackgroundColor(DataAccessUtils.getColorForPosition(this, MainSingleton.getInstance().getItemList().size()));
 
-        Button saveButton = (Button) findViewById(R.id.saveButton);
+        Button saveButton = (Button) findViewById(R.id.addButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

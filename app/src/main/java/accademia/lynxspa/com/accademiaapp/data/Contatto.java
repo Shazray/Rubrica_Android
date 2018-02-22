@@ -1,8 +1,5 @@
 package accademia.lynxspa.com.accademiaapp.data;
 
-/**
- * Created by Simone Cimoli on 15/02/18.
- */
 
 public class Contatto {
 
